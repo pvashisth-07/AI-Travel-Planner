@@ -1,0 +1,4 @@
+# Ignore ai_planner virtual environment
+ai_planner/
+
+.env
