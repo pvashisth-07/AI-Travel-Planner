@@ -1,0 +1,991 @@
+[
+  {
+    "TripPlan": {
+      "title": "4-Day Budget Rishikesh Escape (Delhi → Rishikesh → Haridwar → Delhi)",
+      "dates_assumed": "4 days",
+      "group_size_assumed": "2 friends",
+      "notes": "Spiritual + adventure mix on a tight student budget."
+    },
+    "TransportOptions": {
+      "comparison_table": [
+        {
+          "mode": "Train (Delhi → Haridwar)",
+          "avg_cost_per_person": 450,
+          "travel_time_est": "5–6 hrs",
+          "pros": "Inexpensive, reliable",
+          "cons": "Crowded in general class",
+          "source": "IRCTC fare estimate"
+        },
+        {
+          "mode": "Volvo Bus (Delhi → Rishikesh)",
+          "avg_cost_per_person": 800,
+          "travel_time_est": "6–7 hrs",
+          "pros": "Direct, comfortable",
+          "cons": "More expensive",
+          "source": "RedBus starting price"
+        },
+        {
+          "mode": "Shared cab (Haridwar → Rishikesh)",
+          "avg_cost_per_person": 60,
+          "travel_time_est": "30 min",
+          "pros": "Frequent, cheap",
+          "cons": "Limited luggage space",
+          "source": "Local rates"
+        }
+      ]
+    },
+    "StayOptions": {
+      "choices": [
+        {
+          "name": "Rishikesh — Budget dorm (Backpacker Hostel)",
+          "approx_price_per_night_per_person": 400,
+          "facilities": "Bunks, common kitchen, Wi-Fi",
+          "distance_from_center": "Tapovan / Laxman Jhula area",
+          "why_student_friendly": "Social vibe, group discounts",
+          "live_example_source": "Hostelworld Rishikesh listings"
+        },
+        {
+          "name": "Haridwar — Ashram Dorm",
+          "approx_price_per_night_per_person": 250,
+          "facilities": "Shared spaces, spiritual ambience",
+          "distance_from_center": "Near Har Ki Pauri",
+          "why_student_friendly": "Very cheap, cultural experience",
+          "live_example_source": "Ashram guest dorm rates"
+        }
+      ]
+    },
+    "FoodSuggestions": {
+      "avg_cost_per_meal_budget": "₹80",
+      "cheap_options": ["Ashram/free community kitchen meals", "Local dhabas – thali ₹80–₹120", "Street chaat ₹40–₹70"],
+      "must_try_local_dishes": ["Pooja Thali", "Lassi at Haridwar stalls", "Aloo ke Parathe"]
+    },
+    "DayWiseItinerary": {
+      "Day1": {
+        "route": "Delhi → Haridwar → Rishikesh",
+        "transport_est_cost": 450,
+        "activities": ["Evening Ganga Aarti at Har Ki Pauri (free)", "Walk across Laxman Jhula"],
+        "stay": "Rishikesh hostel (₹400)"
+      },
+      "Day2": {
+        "route": "Local Rishikesh (walking/bike)",
+        "transport_est_cost": 60,
+        "activities": ["Yoga by the Ganges (free/donation)", "Ram Jhula walk", "Beatles Ashram visit (₹200)"],
+        "stay": "Rishikesh hostel"
+      },
+      "Day3": {
+        "route": "Rishikesh → Haridwar",
+        "transport_est_cost": 60,
+        "activities": ["Har Ki Pauri, local markets", "Optional Shri Bharat Mata Mandir (free)"],
+        "stay": "Haridwar ashram (₹250)"
+      },
+      "Day4": {
+        "route": "Haridwar → Delhi",
+        "transport_est_cost": 450,
+        "activities": ["Early morning dip at Ganga, depart"],
+        "stay": "N/A"
+      }
+    }
+  },
+  {
+    "TripPlan": {
+      "title": "5-Day Heritage Jaipur Trip (Agra → Jaipur → Pushkar → Agra)",
+      "dates_assumed": "5 days",
+      "group_size_assumed": "3 friends",
+      "notes": "Culture + temples with ultra-budget focus."
+    },
+    "TransportOptions": {
+      "comparison_table": [
+        {
+          "mode": "Train (Agra → Jaipur)",
+          "avg_cost_per_person": 300,
+          "travel_time_est": "4 hrs",
+          "pros": "Affordable and frequent",
+          "cons": "General class crowded",
+          "source": "IRCTC fares"
+        },
+        {
+          "mode": "State bus (Jaipur → Pushkar)",
+          "avg_cost_per_person": 200,
+          "travel_time_est": "3–4 hrs",
+          "pros": "Very cheap, multiple timings",
+          "cons": "Basic facilities",
+          "source": "Rajasthan State Transport rates"
+        }
+      ]
+    },
+    "StayOptions": {
+      "choices": [
+        {
+          "name": "Jaipur — Hostel dorm (Bani Park)",
+          "approx_price_per_night_per_person": 450,
+          "facilities": "Dorm bunks, kitchen, Wi-Fi",
+          "distance_from_center": "Walking distance of Pink City",
+          "why_student_friendly": "Good social space, shared cost",
+          "live_example_source": "Hostelworld Jaipur"
+        },
+        {
+          "name": "Pushkar — Budget guesthouse",
+          "approx_price_per_night_per_person": 350,
+          "facilities": "Basic room with fan, shared bath",
+          "distance_from_center": "Near Brahma Temple",
+          "why_student_friendly": "Walkable, cheap",
+          "live_example_source": "Booking.com Pushkar listings"
+        }
+      ]
+    },
+    "DayWiseItinerary": {
+      "Day1": {
+        "route": "Agra → Jaipur",
+        "transport_est_cost": 300,
+        "activities": ["Evening stroll in Old City (free)", "Water Palace viewpoint"],
+        "stay": "Jaipur hostel (₹450)"
+      },
+      "Day2": {
+        "route": "Jaipur city tour",
+        "transport_est_cost": 30,
+        "activities": ["Hawa Mahal exterior", "City bazaars", "Optional Amer Fort entry ₹500"],
+        "stay": "Jaipur hostel"
+      },
+      "Day3": {
+        "route": "Jaipur → Pushkar",
+        "transport_est_cost": 200,
+        "activities": ["Brahma Temple", "Pushkar Lake ghats", "Sunset view"],
+        "stay": "Pushkar guesthouse (₹350)"
+      },
+      "Day4": {
+        "route": "Pushkar local walking",
+        "transport_est_cost": 0,
+        "activities": ["Camel safari optional ₹400", "Local markets", "Sunrise at lake"],
+        "stay": "Pushkar guesthouse"
+      },
+      "Day5": {
+        "route": "Pushkar → Agra",
+        "transport_est_cost": "User-arranged",
+        "activities": ["Departure"],
+        "stay": "N/A"
+      }
+    }
+  },
+  {
+    "TripPlan": {
+      "title": "3-Day Ooty Retreat (Bangalore → Ooty → Coonoor → Bangalore)",
+      "dates_assumed": "3 days",
+      "group_size_assumed": "Solo traveler",
+      "notes": "Cool hill station getaway for solo college traveler."
+    },
+    "TransportOptions": {
+      "comparison_table": [
+        {
+          "mode": "Volvo Bus (Bangalore → Ooty)",
+          "avg_cost_per_person": 1200,
+          "travel_time_est": "7–8 hrs",
+          "pros": "Direct air-conditioned journey",
+          "cons": "Long road journey",
+          "source": "RedBus fare estimate"
+        },
+        {
+          "mode": "Train + Taxi (Bangalore → Coimbatore → Ooty)",
+          "avg_cost_per_person": 700,
+          "travel_time_est": "4h train + 3h taxi",
+          "pros": "Economy train + scenic taxi",
+          "cons": "Need to arrange taxi",
+          "source": "IRCTC + local taxi rates"
+        }
+      ]
+    },
+    "DayWiseItinerary": {
+      "Day1": {
+        "route": "Bangalore → Ooty",
+        "transport_est_cost": 700,
+        "activities": ["Evening Ooty Lake stroll (free)", "Botanical Gardens ₹30"],
+        "stay": "Ooty hostel (₹600)"
+      },
+      "Day2": {
+        "route": "Ooty → Coonoor (Toy Train)",
+        "transport_est_cost": 100,
+        "activities": ["Toy train ride", "Sim’s Park visit ₹50", "Tea factory walk (free)"],
+        "stay": "Coonoor homestay (₹500)"
+      },
+      "Day3": {
+        "route": "Coonoor → Ooty → Bangalore",
+        "transport_est_cost": 700,
+        "activities": ["Morning trek/viewpoint (free)", "Depart"],
+        "stay": "N/A"
+      }
+    }
+  },
+  {
+    "TripPlan": {
+      "title": "4-Day Budget Amritsar & Dharamshala Trip (Delhi → Amritsar → Dharamshala → Delhi)",
+      "dates_assumed": "4 days",
+      "group_size_assumed": "2 friends",
+      "notes": "Cultural immersion with spiritual experiences on a tight budget."
+    },
+    "TransportOptions": {
+      "comparison_table": [
+        {
+          "mode": "Train (Delhi → Amritsar)",
+          "avg_cost_per_person": 500,
+          "travel_time_est": "6–7 hrs",
+          "pros": "Economical, scenic route",
+          "cons": "General class can be crowded",
+          "source": "IRCTC fare estimate"
+        },
+        {
+          "mode": "Bus (Amritsar → Dharamshala)",
+          "avg_cost_per_person": 400,
+          "travel_time_est": "6 hrs",
+          "pros": "Direct, affordable",
+          "cons": "Basic amenities",
+          "source": "Himachal Road Transport Corporation"
+        }
+      ]
+    },
+    "StayOptions": {
+      "choices": [
+        {
+          "name": "Amritsar — Budget guesthouse",
+          "approx_price_per_night_per_person": 350,
+          "facilities": "Basic room with fan, shared bath",
+          "distance_from_center": "Near Golden Temple",
+          "why_student_friendly": "Affordable, cultural experience",
+          "live_example_source": "Booking.com Amritsar listings"
+        },
+        {
+          "name": "Dharamshala — Hostel dorm",
+          "approx_price_per_night_per_person": 400,
+          "facilities": "Bunks, common kitchen, Wi-Fi",
+          "distance_from_center": "Mcleodganj area",
+          "why_student_friendly": "Social vibe, group discounts",
+          "live_example_source": "Hostelworld Dharamshala listings"
+        }
+      ]
+    },
+    "FoodSuggestions": {
+      "avg_cost_per_meal_budget": "₹100",
+      "cheap_options": ["Langar at Golden Temple (free)", "Local dhabas – thali ₹100–₹150", "Street food – chaat ₹50–₹80"],
+      "must_try_local_dishes": ["Amritsari Kulcha", "Chole Bhature", "Mcleodganj Momos"]
+    },
+    "DayWiseItinerary": {
+      "Day1": {
+        "route": "Delhi → Amritsar",
+        "transport_est_cost": 500,
+        "activities": ["Visit Golden Temple (free)", "Evening Wagah Border ceremony (free)"],
+        "stay": "Amritsar guesthouse (₹350)"
+      },
+      "Day2": {
+        "route": "Amritsar → Dharamshala",
+        "transport_est_cost": 400,
+        "activities": ["Explore Mcleodganj", "Visit Namgyal Monastery (free)"],
+        "stay": "Dharamshala hostel (₹400)"
+      },
+      "Day3": {
+        "route": "Dharamshala local exploration",
+        "transport_est_cost": 0,
+        "activities": ["Trek to Triund (free)", "Visit Bhagsu Waterfall (free)"],
+        "stay": "Dharamshala hostel"
+      },
+      "Day4": {
+        "route": "Dharamshala → Delhi",
+        "transport_est_cost": 400,
+        "activities": ["Morning meditation session (free)", "Departure"],
+        "stay": "N/A"
+      }
+    }
+  },
+  {
+    "TripPlan": {
+      "title": "5-Day Budget Kerala Backwaters & Beaches (Kochi → Alleppey → Varkala → Kochi)",
+      "dates_assumed": "5 days",
+      "group_size_assumed": "Solo traveler",
+      "notes": "Nature, relaxation, and coastal beauty on a budget."
+    },
+    "TransportOptions": {
+      "comparison_table": [
+        {
+          "mode": "Train (Kochi → Alleppey)",
+          "avg_cost_per_person": 150,
+          "travel_time_est": "1.5 hrs",
+          "pros": "Inexpensive, scenic",
+          "cons": "Limited frequency",
+          "source": "IRCTC fare estimate"
+        },
+        {
+          "mode": "Bus (Alleppey → Varkala)",
+          "avg_cost_per_person": 200,
+          "travel_time_est": "3 hrs",
+          "pros": "Affordable, direct",
+          "cons": "Basic comfort",
+          "source": "Kerala State Road Transport Corporation"
+        }
+      ]
+    },
+    "StayOptions": {
+      "choices": [
+        {
+          "name": "Kochi — Budget hostel",
+          "approx_price_per_night_per_person": 500,
+          "facilities": "Dormitory, Wi-Fi, common area",
+          "distance_from_center": "Fort Kochi area",
+          "why_student_friendly": "Social atmosphere, affordable",
+          "live_example_source": "Hostelworld Kochi listings"
+        },
+        {
+          "name": "Varkala — Beachside guesthouse",
+          "approx_price_per_night_per_person": 600,
+          "facilities": "Private room, sea view",
+          "distance_from_center": "Near Papanasam Beach",
+          "why_student_friendly": "Peaceful, budget-friendly",
+          "live_example_source": "Booking.com Varkala listings"
+        }
+      ]
+    },
+    "FoodSuggestions": {
+      "avg_cost_per_meal_budget": "₹120",
+      "cheap_options": ["Local eateries – Kerala Sadya ₹120–₹150", "Street food – banana chips ₹30–₹50", "Tea stalls – chai ₹20–₹30"],
+      "must_try_local_dishes": ["Appam with Stew", "Karimeen Pollichathu", "Puttu with Kadala Curry"]
+    },
+    "DayWiseItinerary": {
+      "Day1": {
+        "route": "Kochi → Alleppey",
+        "transport_est_cost": 150,
+        "activities": ["Explore Alappuzha Beach (free)", "Visit Alappuzha Lighthouse (₹20)"],
+        "stay": "Alleppey guesthouse (₹500)"
+      },
+      "Day2": {
+        "route": "Alleppey → Varkala",
+        "transport_est_cost": 200,
+        "activities": ["Relax at Papanasam Beach (free)", "Visit Janardhana Swamy Temple (free)"],
+        "stay": "Varkala guesthouse (₹600)"
+      },
+      "Day3": {
+        "route": "Varkala local exploration",
+        "transport_est_cost": 0,
+        "activities": ["Cliffside walk (free)", "Visit Sivagiri Mutt (free)"],
+        "stay": "Varkala guesthouse"
+      },
+      "Day4": {
+        "route": "Varkala → Kochi",
+        "transport_est_cost": 200,
+        "activities": ["Explore Fort Kochi area (free)", "Visit St. Francis Church (free)"],
+        "stay": "Kochi hostel (₹500)"
+      },
+      "Day5": {
+        "route": "Kochi departure",
+        "transport_est_cost": 0,
+        "activities": ["Morning visit to Mattancherry Palace (₹10)", "Departure"],
+        "stay": "N/A"
+      }
+    }
+  },
+  {
+  "TripPlan": {
+    "title": "5-Day Budget Kerala Backwaters (Kochi → Alleppey → Kumarakom → Kochi)",
+    "dates_assumed": "5 days",
+    "group_size_assumed": "Solo traveler",
+    "notes": "Serene backwater exploration with cultural immersion."
+  },
+  "TransportOptions": {
+    "comparison_table": [
+      {
+        "mode": "Train (Kochi → Alleppey)",
+        "avg_cost_per_person": 150,
+        "travel_time_est": "2 hrs",
+        "pros": "Scenic, economical",
+        "cons": "Limited frequency",
+        "source": "IRCTC fare estimate"
+      },
+      {
+        "mode": "Local ferry (Alleppey → Kumarakom)",
+        "avg_cost_per_person": 50,
+        "travel_time_est": "1.5 hrs",
+        "pros": "Authentic experience",
+        "cons": "Weather dependent",
+        "source": "Kerala Tourism"
+      }
+    ]
+  },
+  "StayOptions": {
+    "choices": [
+      {
+        "name": "Alleppey — Budget homestay",
+        "approx_price_per_night_per_person": 500,
+        "facilities": "Shared rooms, local cuisine",
+        "distance_from_center": "Near backwater canals",
+        "why_student_friendly": "Affordable, cultural immersion",
+        "live_example_source": "Booking.com Alleppey listings"
+      },
+      {
+        "name": "Kumarakom — Budget resort",
+        "approx_price_per_night_per_person": 600,
+        "facilities": "Shared rooms, lake views",
+        "distance_from_center": "Near Vembanad Lake",
+        "why_student_friendly": "Scenic, budget-friendly",
+        "live_example_source": "Agoda Kumarakom listings"
+      }
+    ]
+  },
+  "FoodSuggestions": {
+    "avg_cost_per_meal_budget": "₹100",
+    "cheap_options": ["Local eateries – Kerala Sadya ₹80–₹120", "Street food – Banana fritters ₹30–₹50"],
+    "must_try_local_dishes": ["Karimeen Pollichathu", "Appam with Stew", "Puttu with Kadala Curry"]
+  },
+  "DayWiseItinerary": {
+    "Day1": {
+      "route": "Kochi → Alleppey",
+      "transport_est_cost": 150,
+      "activities": ["Explore Alleppey Beach", "Visit Alappuzha Lighthouse (₹20)"],
+      "stay": "Alleppey homestay (₹500)"
+    },
+    "Day2": {
+      "route": "Alleppey backwaters exploration",
+      "transport_est_cost": 50,
+      "activities": ["Houseboat cruise (₹500)", "Visit Kuttanadu region"],
+      "stay": "Alleppey homestay"
+    },
+    "Day3": {
+      "route": "Alleppey → Kumarakom",
+      "transport_est_cost": 50,
+      "activities": ["Visit Kumarakom Bird Sanctuary (₹50)", "Relax by Vembanad Lake"],
+      "stay": "Kumarakom resort (₹600)"
+    },
+    "Day4": {
+      "route": "Kumarakom local exploration",
+      "transport_est_cost": 0,
+      "activities": ["Village walk", "Visit local temples"],
+      "stay": "Kumarakom resort"
+    },
+    "Day5": {
+      "route": "Kumarakom → Kochi",
+      "transport_est_cost": 150,
+      "activities": ["Explore Fort Kochi", "Visit Chinese Fishing Nets"],
+      "stay": "N/A"
+    }
+  }
+},
+{
+  "TripPlan": {
+    "title": "4-Day Budget Goa Beach & Culture (Panaji → Old Goa → Palolem → Panaji)",
+    "dates_assumed": "4 days",
+    "group_size_assumed": "2 friends",
+    "notes": "Blend of beaches, heritage, and vibrant markets."
+  },
+  "TransportOptions": {
+    "comparison_table": [
+      {
+        "mode": "Train (Panaji → Madgaon)",
+        "avg_cost_per_person": 200,
+        "travel_time_est": "2 hrs",
+        "pros": "Scenic, affordable",
+        "cons": "Limited services",
+        "source": "Indian Railways"
+      },
+      {
+        "mode": "Local bus (Madgaon → Palolem)",
+        "avg_cost_per_person": 50,
+        "travel_time_est": "1 hr",
+        "pros": "Economical, frequent",
+        "cons": "Basic facilities",
+        "source": "Goa State Transport"
+      }
+    ]
+  },
+  "StayOptions": {
+    "choices": [
+      {
+        "name": "Panaji — Budget guesthouse",
+        "approx_price_per_night_per_person": 400,
+        "facilities": "Shared rooms, local cuisine",
+        "distance_from_center": "Near Miramar Beach",
+        "why_student_friendly": "Affordable, central location",
+        "live_example_source": "Booking.com Panaji listings"
+      },
+      {
+        "name": "Palolem — Beach shack accommodation",
+        "approx_price_per_night_per_person": 500,
+        "facilities": "Beachfront, shared facilities",
+        "distance_from_center": "On Palolem Beach",
+        "why_student_friendly": "Budget-friendly, vibrant atmosphere",
+        "live_example_source": "Agoda Palolem listings"
+      }
+    ]
+  },
+  "FoodSuggestions": {
+    "avg_cost_per_meal_budget": "₹150",
+    "cheap_options": ["Beach shacks – Seafood thali ₹100–₹150", "Local eateries – Goan sausages ₹50–₹80"],
+    "must_try_local_dishes": ["Prawn Balchão", "Bebinca", "Feni (local spirit)"]
+  },
+  "DayWiseItinerary": {
+    "Day1": {
+      "route": "Panaji → Old Goa",
+      "transport_est_cost": 50,
+      "activities": ["Visit Basilica of Bom Jesus (free)", "Explore St. Augustine Tower (free)"],
+      "stay": "Panaji guesthouse (₹400)"
+    },
+    "Day2": {
+      "route": "Panaji → Palolem",
+      "transport_est_cost": 50,
+      "activities": ["Relax on Palolem Beach", "Visit Butterfly Beach (boat ride ₹300)"],
+      "stay": "Palolem beach shack (₹500)"
+    },
+    "Day3": {
+      "route": "Palolem local exploration",
+      "transport_est_cost": 0,
+      "activities": ["Yoga session on the beach (₹200)", "Visit Cabo De Rama Fort (free)"],
+      "stay": "Palolem beach shack"
+    },
+    "Day4": {
+      "route": "Palolem → Panaji",
+      "transport_est_cost": 50,
+      "activities": ["Explore Fontainhas Latin Quarter", "Visit Dona Paula Viewpoint (free)"],
+      "stay": "N/A"
+    }
+  }
+},
+{
+  "trip_title": "4-Day Budget Udaipur & Kumbhalgarh (Udaipur → Kumbhalgarh → Udaipur)",
+  "origin": "Udaipur",
+  "destinations": ["Udaipur", "Kumbhalgarh"],
+  "days": 4,
+  "people": 1,
+  "budget": "₹3,800 approx",
+  "transport_options": [
+    {
+      "mode": "Train",
+      "route": "Jaipur → Udaipur",
+      "cost": "₹250 (sleeper class)",
+      "time": "6–7 hrs",
+      "pros": "Cheap and comfortable for students",
+      "cons": "Takes longer than bus"
+    },
+    {
+      "mode": "Bus",
+      "route": "Jaipur → Udaipur",
+      "cost": "₹400–500 (RSRTC/Private)",
+      "time": "5–6 hrs",
+      "pros": "More frequent, direct",
+      "cons": "Slightly costly compared to train"
+    },
+    {
+      "mode": "Local Bus",
+      "route": "Udaipur → Kumbhalgarh",
+      "cost": "₹120",
+      "time": "3 hrs",
+      "pros": "Cheapest way to reach",
+      "cons": "Limited timings"
+    },
+    {
+      "mode": "Shared Cab",
+      "route": "Udaipur → Kumbhalgarh",
+      "cost": "₹350–400 per person",
+      "time": "2 hrs",
+      "pros": "Faster and convenient",
+      "cons": "Costlier than bus"
+    }
+  ],
+  "stay_options": [
+    {
+      "name": "Zostel Udaipur",
+      "price_per_night": "₹400 (dorm)",
+      "facilities": "Wi-Fi, common kitchen, rooftop view",
+      "distance_from_center": "0.5 km from City Palace",
+      "student_friendly": "Yes, backpacker community"
+    },
+    {
+      "name": "Bunkyard Hostel",
+      "price_per_night": "₹350",
+      "facilities": "Dorm beds, café, rooftop with lake view",
+      "distance_from_center": "0.7 km",
+      "student_friendly": "Yes, budget-friendly social hostel"
+    },
+    {
+      "name": "Kumbhalgarh Guesthouse",
+      "price_per_night": "₹500",
+      "facilities": "Basic rooms, attached bathroom, local meals",
+      "distance_from_center": "Near Kumbhalgarh Fort",
+      "student_friendly": "Yes, affordable and close to attractions"
+    }
+  ],
+  "food_suggestions": [
+    {
+      "place": "Local Dhabas & Street Food",
+      "average_cost_per_meal": "₹80–120",
+      "must_try": ["Dal Baati Churma", "Mirchi Bada", "Poha"]
+    },
+    {
+      "place": "City Palace Area Cafés",
+      "average_cost_per_meal": "₹150–200",
+      "must_try": ["Rajasthani Thali", "Lassi", "Local Sweets"]
+    }
+  ],
+  "itinerary": {
+    "Day 1": {
+      "location": "Udaipur",
+      "activities": [
+        "Check-in at hostel",
+        "Visit City Palace (₹30 entry)",
+        "Walk around Pichola Lake",
+        "Sunset at Ambrai Ghat (free)"
+      ],
+      "meals": "Street food dinner (~₹120)"
+    },
+    "Day 2": {
+      "location": "Udaipur",
+      "activities": [
+        "Morning visit to Jagdish Temple (free)",
+        "Boat ride at Lake Pichola (~₹100)",
+        "Saheliyon ki Bari Garden (~₹20 entry)",
+        "Shopping at Hathi Pol Bazaar"
+      ],
+      "meals": "Budget thali lunch (~₹150)"
+    },
+    "Day 3": {
+      "location": "Kumbhalgarh",
+      "activities": [
+        "Travel to Kumbhalgarh by bus/shared cab",
+        "Visit Kumbhalgarh Fort (₹40 entry for Indians)",
+        "Light trek around Kumbhalgarh Wildlife Sanctuary",
+        "Stay overnight near fort"
+      ],
+      "meals": "Simple dhaba food (~₹120)"
+    },
+    "Day 4": {
+      "location": "Udaipur",
+      "activities": [
+        "Return to Udaipur",
+        "Relax at Fateh Sagar Lake (free)",
+        "Explore local markets before departure"
+      ],
+      "meals": "Street snacks (~₹100)"
+    }
+  },
+  "budget_tracking": {
+    "travel": "₹1,200",
+    "stay": "₹1,250",
+    "food": "₹1,000",
+    "activities": "₹350",
+    "total": "₹3,800 approx"
+  },
+  "seasonal_tips": {
+    "best_time_to_visit": "October – March",
+    "weather": "Pleasant days, chilly nights",
+    "what_to_carry": "Warm clothes, trekking shoes, water bottle"
+  },
+  "student_hacks": [
+    "Use RSRTC buses for cheapest travel",
+    "Travel overnight between Jaipur and Udaipur to save on stay",
+    "Eat at local dhabas for ₹100 per meal",
+    "Stay in hostels like Zostel for cheap dorm beds"
+  ]
+},
+{
+  "trip_title": "3-Day Jaipur & Pushkar Budget Trip",
+  "origin": "Jaipur",
+  "destinations": ["Jaipur", "Pushkar"],
+  "days": 3,
+  "people": 1,
+  "budget": "₹3,200 approx",
+  "transport_options": [
+    {
+      "mode": "Bus",
+      "route": "Jaipur → Pushkar",
+      "cost": "₹150",
+      "time": "3 hrs",
+      "pros": "Cheap and frequent",
+      "cons": "Basic seating"
+    },
+    {
+      "mode": "Train",
+      "route": "Jaipur → Ajmer + Bus to Pushkar",
+      "cost": "₹100 + ₹40",
+      "time": "2.5 hrs",
+      "pros": "Cheapest combo option",
+      "cons": "Train timings fixed"
+    }
+  ],
+  "stay_options": [
+    {
+      "name": "Moustache Hostel Jaipur",
+      "price_per_night": "₹400",
+      "facilities": "Wi-Fi, rooftop, AC dorms",
+      "student_friendly": "Yes"
+    },
+    {
+      "name": "Zostel Pushkar",
+      "price_per_night": "₹450",
+      "facilities": "Pool, dorms, common lounge",
+      "student_friendly": "Yes"
+    }
+  ],
+  "food_suggestions": [
+    {
+      "place": "Pushkar Street Food",
+      "average_cost_per_meal": "₹100",
+      "must_try": ["Malpua", "Falafel", "Chaat"]
+    }
+  ],
+  "itinerary": {
+    "Day 1": {
+      "location": "Jaipur",
+      "activities": [
+        "Amber Fort visit (₹50 entry)",
+        "Jal Mahal photography",
+        "Evening at Hawa Mahal (₹50 entry)"
+      ]
+    },
+    "Day 2": {
+      "location": "Pushkar",
+      "activities": [
+        "Visit Brahma Temple",
+        "Walk around Pushkar Lake",
+        "Shopping at Pushkar Bazaar"
+      ]
+    },
+    "Day 3": {
+      "location": "Pushkar → Jaipur",
+      "activities": [
+        "Sunrise hike to Savitri Temple",
+        "Return to Jaipur",
+        "Explore Johari Bazaar"
+      ]
+    }
+  },
+  "budget_tracking": {
+    "travel": "₹400",
+    "stay": "₹1,300",
+    "food": "₹1,000",
+    "activities": "₹500",
+    "total": "₹3,200 approx"
+  }
+},
+{
+  "trip_title": "4-Day Jodhpur & Jaisalmer Desert Budget Trip",
+  "origin": "Jodhpur",
+  "destinations": ["Jodhpur", "Jaisalmer"],
+  "days": 4,
+  "people": 1,
+  "budget": "₹4,500 approx",
+  "transport_options": [
+    {
+      "mode": "Train",
+      "route": "Jodhpur → Jaisalmer",
+      "cost": "₹180 (sleeper)",
+      "time": "6 hrs",
+      "pros": "Cheap, overnight option",
+      "cons": "Long duration"
+    },
+    {
+      "mode": "Bus",
+      "route": "Jodhpur → Jaisalmer",
+      "cost": "₹250–300",
+      "time": "5 hrs",
+      "pros": "More frequent",
+      "cons": "Bumpy ride"
+    }
+  ],
+  "stay_options": [
+    {
+      "name": "Moustache Hostel Jodhpur",
+      "price_per_night": "₹400",
+      "facilities": "Rooftop view, dorms, Wi-Fi",
+      "student_friendly": "Yes"
+    },
+    {
+      "name": "Nomads Jaisalmer Hostel",
+      "price_per_night": "₹500",
+      "facilities": "Dorms, desert tours, rooftop",
+      "student_friendly": "Yes"
+    }
+  ],
+  "food_suggestions": [
+    {
+      "place": "Jodhpur Street Food",
+      "average_cost_per_meal": "₹120",
+      "must_try": ["Mirchi Bada", "Makhaniya Lassi"]
+    },
+    {
+      "place": "Jaisalmer Dhabas",
+      "average_cost_per_meal": "₹100",
+      "must_try": ["Ker Sangri", "Dal Baati"]
+    }
+  ],
+  "itinerary": {
+    "Day 1": {
+      "location": "Jodhpur",
+      "activities": ["Mehrangarh Fort (₹100 entry)", "Clock Tower Market", "Blue City walk"]
+    },
+    "Day 2": {
+      "location": "Jaisalmer",
+      "activities": ["Check-in hostel", "Visit Jaisalmer Fort (₹50 entry)", "Patwon ki Haveli"]
+    },
+    "Day 3": {
+      "location": "Jaisalmer Desert",
+      "activities": ["Camel Safari (~₹800)", "Sunset at Sam Sand Dunes", "Overnight camping"]
+    },
+    "Day 4": {
+      "location": "Jaisalmer → Jodhpur",
+      "activities": ["Local shopping", "Return journey"]
+    }
+  },
+  "budget_tracking": {
+    "travel": "₹800",
+    "stay": "₹1,400",
+    "food": "₹1,200",
+    "activities": "₹1,100",
+    "total": "₹4,500 approx"
+  }
+},
+{
+  "trip_title": "2-Day Mount Abu Budget Weekend Trip",
+  "origin": "Udaipur",
+  "destinations": ["Mount Abu"],
+  "days": 2,
+  "people": 1,
+  "budget": "₹2,200 approx",
+  "transport_options": [
+    {
+      "mode": "Bus",
+      "route": "Udaipur → Mount Abu",
+      "cost": "₹250",
+      "time": "4 hrs",
+      "pros": "Cheap and direct",
+      "cons": "Limited luxury buses"
+    }
+  ],
+  "stay_options": [
+    {
+      "name": "Backpackers Hostel Mount Abu",
+      "price_per_night": "₹500",
+      "facilities": "Dorms, Wi-Fi, rooftop",
+      "student_friendly": "Yes"
+    }
+  ],
+  "food_suggestions": [
+    {
+      "place": "Local Market Dhabas",
+      "average_cost_per_meal": "₹100",
+      "must_try": ["Gujarati Thali", "Pakoras"]
+    }
+  ],
+  "itinerary": {
+    "Day 1": {
+      "location": "Mount Abu",
+      "activities": ["Dilwara Jain Temples (₹30)", "Nakki Lake boating (~₹100)", "Sunset Point hike"]
+    },
+    "Day 2": {
+      "location": "Mount Abu",
+      "activities": ["Guru Shikhar trek", "Local bazaar shopping", "Return to Udaipur"]
+    }
+  },
+  "budget_tracking": {
+    "travel": "₹500",
+    "stay": "₹1,000",
+    "food": "₹500",
+    "activities": "₹200",
+    "total": "₹2,200 approx"
+  }
+},
+{
+  "trip_title": "2-Day Ajmer & Pushkar Budget Trip",
+  "origin": "Ajmer",
+  "destinations": ["Ajmer", "Pushkar"],
+  "days": 2,
+  "people": 1,
+  "budget": "₹2,000 approx",
+  "transport_options": [
+    {
+      "mode": "Shared Auto",
+      "route": "Ajmer → Pushkar",
+      "cost": "₹40",
+      "time": "30 mins",
+      "pros": "Very cheap",
+      "cons": "Crowded"
+    }
+  ],
+  "stay_options": [
+    {
+      "name": "Hotel Shanti Palace Pushkar",
+      "price_per_night": "₹600",
+      "facilities": "Basic rooms, Wi-Fi",
+      "student_friendly": "Yes"
+    }
+  ],
+  "food_suggestions": [
+    {
+      "place": "Pushkar Cafés",
+      "average_cost_per_meal": "₹120",
+      "must_try": ["Israeli food", "Pancakes"]
+    }
+  ],
+  "itinerary": {
+    "Day 1": {
+      "location": "Ajmer",
+      "activities": ["Ajmer Sharif Dargah", "Ana Sagar Lake", "Travel to Pushkar"]
+    },
+    "Day 2": {
+      "location": "Pushkar",
+      "activities": ["Brahma Temple", "Pushkar Lake", "Shopping", "Return to Ajmer"]
+    }
+  },
+  "budget_tracking": {
+    "travel": "₹200",
+    "stay": "₹600",
+    "food": "₹800",
+    "activities": "₹400",
+    "total": "₹2,000 approx"
+  }
+},
+{
+  "trip_title": "3-Day Bikaner Budget Heritage Trip",
+  "origin": "Bikaner",
+  "destinations": ["Bikaner"],
+  "days": 3,
+  "people": 1,
+  "budget": "₹3,000 approx",
+  "transport_options": [
+    {
+      "mode": "Auto/Walking",
+      "route": "Local sightseeing",
+      "cost": "₹200 per day",
+      "pros": "Cheap",
+      "cons": "Time-consuming"
+    }
+  ],
+  "stay_options": [
+    {
+      "name": "Tanisha Heritage Haveli Hostel",
+      "price_per_night": "₹400",
+      "facilities": "Dorms, Wi-Fi, rooftop",
+      "student_friendly": "Yes"
+    }
+  ],
+  "food_suggestions": [
+    {
+      "place": "Bikaner Dhabas",
+      "average_cost_per_meal": "₹100",
+      "must_try": ["Bikaneri Bhujia", "Ghevar", "Kachori"]
+    }
+  ],
+  "itinerary": {
+    "Day 1": {
+      "location": "Bikaner",
+      "activities": ["Junagarh Fort (₹50 entry)", "Rampuria Haveli walk"]
+    },
+    "Day 2": {
+      "location": "Bikaner",
+      "activities": ["Karni Mata Temple (Rat Temple)", "Local bazaar shopping"]
+    },
+    "Day 3": {
+      "location": "Bikaner Desert",
+      "activities": ["Camel Breeding Farm", "Desert Safari (~₹600)"]
+    }
+  },
+  "budget_tracking": {
+    "travel": "₹600",
+    "stay": "₹1,200",
+    "food": "₹800",
+    "activities": "₹400",
+    "total": "₹3,000 approx"
+  }
+}
+]
