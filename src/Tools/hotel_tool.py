@@ -1,5 +1,6 @@
 import requests
 from datetime import datetime
+from langchain_core.tools import tool
 
 BASE_URL = "https://data.xotelo.com/api"
 HOTEL_KEY = "YOUR_HOTEL_KEY"  # Replace with actual hotel_key

@@ -1,6 +1,8 @@
-from langgraph.prebuilt import ToolNode
+
+from langchain_core.tools import tool
 from langchain_tavily import TavilySearch
 
+@tool
 def get_search_tool():
     """Returns the search tool for websearch."""
     tool = TavilySearch(
