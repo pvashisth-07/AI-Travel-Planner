@@ -1,4 +1,4 @@
-from langgraph.prebuilt import ToolNode
+from langgraph.prebuilt import ToolNode # pyright: ignore[reportMissingImports]
 from src.Tools.search_tool import get_search_tool
 from src.Tools.hotel_tool import fetch_hotel_rates
 

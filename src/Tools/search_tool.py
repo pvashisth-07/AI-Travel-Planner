@@ -1,5 +1,5 @@
-from langchain_core.tools import tool
-from langchain_tavily import TavilySearch
+from langchain_core.tools import tool # pyright: ignore[reportMissingImports]
+from langchain_tavily import TavilySearch # pyright: ignore[reportMissingImports]
 
 @tool
 def get_search_tool():
