@@ -14,4 +14,4 @@ class ItenaryNode:
         Process the input state and generate an itenary response.
         """
 
-        return {"itenary":self.llm.invoke(state['messages'])}
+        return {"itenary":self.llm.invoke(state["query"])}
