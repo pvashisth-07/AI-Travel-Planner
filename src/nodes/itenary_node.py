@@ -1,12 +1,13 @@
-from src.State.state import State
 
+from src.fine_tuning.llm_tuning import Groqllm
+from src.State.state import State
 class ItenaryNode:
     """
     Itenary Node implementation
     """
 
-    def __init__(self,model):
-        self.llm=model
+    def __init__(self):
+        self.llm=Groqllm.get_llm()
 
     def process(self,state:State)->dict:
         """
