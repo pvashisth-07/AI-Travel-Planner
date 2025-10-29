@@ -6,7 +6,8 @@ from langchain_groq import ChatGroq
 
 class GradeQuery:
     """
-    GradeQuery Node — checks if the generated query matches the required structured format.
+    GradeQuery Node — strictly checks if the generated query matches the required structured format.
+    Returns only 'PASS' or 'FAIL'.
     """
 
     def __init__(self):
@@ -15,16 +16,15 @@ class GradeQuery:
 
     def process(self, state: State) -> dict:
         """
-        Process the input state and evaluate if the query is properly structured.
+        Process the input state and return 'PASS' or 'FAIL' only.
         """
 
-        user_query = state["structured_query"] if "structured_query" in state else state["query"]
+        user_query = state.get("structured_query", state.get("query", {}))
 
         prompt = f"""
         You are a strict validator.
 
-        Task:
-        Check if the following query is a *structured query* following exactly this format:
+        Check if the following query is a *structured query* that exactly follows this format:
 
         {{
             "source": str,
@@ -35,20 +35,27 @@ class GradeQuery:
             "no_of_travellers": int
         }}
 
-        - All keys must exist.
+        - All keys must be present.
         - The data types must match.
         - "no_of_travellers" must be an integer.
-        - If all fields are valid → Output exactly: "PASS"
-        - If any field is missing or invalid → Output exactly: "FAIL"
-          followed by a brief reason (e.g., Missing field 'budget').
+        
+        Output strictly one word:
+        PASS  → if the query fully matches the required format
+        FAIL  → otherwise
+
+        Do not include any explanation, punctuation, or extra text.
 
         Query to check:
         {json.dumps(user_query, indent=4)}
         """
 
         response = self.llm.invoke(prompt)
+        result = response.strip().upper()
 
-        # Post-process response
-        graded_output = response.strip()
+        # Normalize the LLM output — force to only PASS or FAIL
+        if "PASS" in result:
+            result = "PASS"
+        else:
+            result = "FAIL"
 
-        return {"graded_query": graded_output}
+        return {"graded_query": result}
