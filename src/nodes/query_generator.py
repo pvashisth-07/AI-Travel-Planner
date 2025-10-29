@@ -1,6 +1,9 @@
 from src.State.state import State
-from src.fine_tuning.llm_tuning import Groqllm
 import ast
+import json
+import os
+from dotenv import load_dotenv
+from langchain_groq import ChatGroq
 
 class QueryGenerator:
     """
@@ -17,7 +20,8 @@ class QueryGenerator:
     }
     """
     def __init__(self):
-        self.llm = Groqllm().get_llm()
+        load_dotenv()
+        self.llm=ChatGroq(api_key=self.groq_api_key,model="openai/gpt-oss-20b")
     def process(self, state: State) -> dict:
         """Transform user input query into structured format."""
         prompt = f"""
