@@ -22,8 +22,11 @@ class QueryGenerator:
     def __init__(self):
         load_dotenv()
         self.llm=ChatGroq(api_key=self.groq_api_key,model="openai/gpt-oss-20b")
+
     def process(self, state: State) -> dict:
+
         """Transform user input query into structured format."""
+        
         prompt = f"""
         Transform the following user input query into a structured format with the following fields:
         source, destination, start_date, end_date, budget, no_of_travellers.
