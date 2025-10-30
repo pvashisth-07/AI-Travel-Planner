@@ -1,6 +1,6 @@
-
 from src.fine_tuning.llm_tuning import Groqllm
 from src.State.state import State
+
 class ItenaryNode:
     """
     Itenary Node implementation
