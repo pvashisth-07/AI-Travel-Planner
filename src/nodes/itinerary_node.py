@@ -13,7 +13,9 @@ class ItenaryNode:
 
     def __init__(self):
         # Initialize LLM
-        self.llm = Groqllm.get_llm()
+        groq_instance = Groqllm()
+        groq_instance.load_data()      
+        self.llm = groq_instance.get_llm()
 
         # Attach tools
         self.tools = Tools.get_tools()

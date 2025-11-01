@@ -6,7 +6,10 @@ from src.State.state import State
 def main():
     
     print("Initializing LLM...")
-    llm = Groqllm.get_llm()   
+    groq_llm = Groqllm()       
+    groq_llm.load_data()       
+    llm = groq_llm.get_llm()   
+    print("LLM initialized successfully!")   
 
     # Build the graph
     print("Building AI Travel Planner Graph...")
