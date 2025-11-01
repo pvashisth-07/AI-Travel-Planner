@@ -21,7 +21,8 @@ class QueryGenerator:
     """
     def __init__(self):
         load_dotenv()
-        self.llm=ChatGroq(api_key=self.groq_api_key,model="openai/gpt-oss-20b")
+        self.groq_api_key = os.getenv("GROQ_API_KEY")
+        self.llm = ChatGroq(api_key=self.groq_api_key, model="openai/gpt-oss-20b")
 
     def process(self, state: State) -> dict:
 
