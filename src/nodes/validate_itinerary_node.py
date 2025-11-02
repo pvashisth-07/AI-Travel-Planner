@@ -65,7 +65,7 @@ class Validate_Itinerary_Node:
         response = self.llm.invoke(prompt)
 
         # Normalize output — keep only PASS or FAIL
-        result = response.strip().upper()
+        result = response.content.strip().upper()
         if "FAIL" in result:
             result = "PASS"
         else:

@@ -3,6 +3,8 @@ from src.fine_tuning.llm_tuning import Groqllm
 from src.Tools.tool_assembly import Tools
 from langchain.prompts import ChatPromptTemplate
 from langchain.schema import HumanMessage
+import json
+
 
 class ItineraryNode:
     """
@@ -13,91 +15,95 @@ class ItineraryNode:
     """
 
     def __init__(self):
-        # Initialize LLM
+        # Initialize LLM from Groq wrapper (no prompt inside Groqllm)
         groq_instance = Groqllm()
-        groq_instance.load_data()
         self.llm = groq_instance.get_llm()
 
         # Attach tools
         self.tools = Tools.get_tools()
-        self.tool_node = Tools.create_tool_node(self.tools)
 
     def process(self, state: State) -> dict:
-      structured_query = state.get("structured_query")
-      if not structured_query:
-          raise ValueError("structured_query is missing in state")
+        structured_query = state.get("structured_query")
+        if not structured_query:
+            raise ValueError("❌ 'structured_query' missing in state")
 
-      # --- ChatPromptTemplate ---
-      prompt_template = ChatPromptTemplate.from_messages([
-          HumanMessage(content="""
-      You are a travel itinerary planner. Using the structured query below, create a realistic and helpful trip itinerary.
-      Use web search and hotel tools where needed to find relevant options.
+        # --- Define prompt ---
+        prompt_template = ChatPromptTemplate.from_messages([
+            HumanMessage(content="""
+You are a travel itinerary planner.
 
-      Structured Query:
-      {structured_query}
+Using the structured query below, create a realistic and budget-friendly trip itinerary for college students.
 
-      Follow this exact output JSON structure (do not copy example values, use descriptive types):
+Structured Query:
+{structured_query}
+
+Follow this exact JSON output structure:
+{
+  "TripPlan": {
+    "title": "Short descriptive title (e.g., 4-Day Budget Himachal Trip)",
+    "dates_assumed": "duration or date range",
+    "group_size_assumed": "approximate traveler group",
+    "notes": "short context summary"
+  },
+  "TransportOptions": {
+    "comparison_table": [
       {
-        "TripPlan": {
-          "title": "Short descriptive title (e.g., 4-Day Budget Himachal Trip)",
-          "dates_assumed": "duration or date range",
-          "group_size_assumed": "approximate traveler group",
-          "notes": "short context summary"
-        },
-        "TransportOptions": {
-          "comparison_table": [
-            {
-              "mode": "Mode of travel (Train, Bus, Flight, etc.)",
-              "avg_cost_per_person": "integer in ₹",
-              "travel_time_est": "time duration",
-              "pros": "advantages",
-              "cons": "disadvantages",
-              "source": "reference info or tool name"
-            }
-          ]
-        },
-        "StayOptions": {
-          "choices": [
-            {
-              "name": "Hotel or hostel name",
-              "approx_price_per_night_per_person": "integer in ₹",
-              "facilities": "key features",
-              "distance_from_center": "location info",
-              "why_student_friendly": "reason",
-              "live_example_source": "data source"
-            }
-          ]
-        },
-        "FoodSuggestions": {
-          "avg_cost_per_meal_budget": "string like ₹100",
-          "cheap_options": ["list", "of", "budget", "meals"],
-          "must_try_local_dishes": ["dish1", "dish2"]
-        },
-        "DayWiseItinerary": {
-          "Day1": {
-            "route": "travel route or location",
-            "transport_est_cost": "integer in ₹",
-            "activities": ["activity1", "activity2"],
-            "stay": "where to stay"
-          }
-        }
+        "mode": "Mode of travel (Train, Bus, Flight, etc.)",
+        "avg_cost_per_person": 0,
+        "travel_time_est": "time duration",
+        "pros": "advantages",
+        "cons": "disadvantages",
+        "source": "reference or tool"
       }
+    ]
+  },
+  "StayOptions": {
+    "choices": [
+      {
+        "name": "Hotel/Hostel name",
+        "approx_price_per_night_per_person": 0,
+        "facilities": "key features",
+        "distance_from_center": "location info",
+        "why_student_friendly": "reason",
+        "live_example_source": "data source"
+      }
+    ]
+  },
+  "FoodSuggestions": {
+    "avg_cost_per_meal_budget": "e.g., ₹150",
+    "cheap_options": ["list", "of", "budget", "meals"],
+    "must_try_local_dishes": ["dish1", "dish2"]
+  },
+  "DayWiseItinerary": {
+    "Day1": {
+      "route": "travel route or location",
+      "transport_est_cost": 0,
+      "activities": ["activity1", "activity2"],
+      "stay": "where to stay"
+    }
+  }
+}
 
-      Rules:
-      - Always output valid JSON.
-      - Give multiple travel options and FoodSuggestions.
-      - Do not include explanations or reasoning.
-      - Use tool results for prices or hotel examples if available.
-      - Focus on student-friendly, budget-conscious options.
-      """)
-      ])
+Rules:
+- Always output VALID JSON only.
+- Use realistic student-friendly pricing and stays.
+- No explanations or text outside JSON.
+- Use web/hotel tools for realistic data.
+""")
+        ])
 
-      # --- Format prompt to string for LLM ---
-      formatted_prompt_str = prompt_template.format(structured_query=structured_query)
+        # Format the prompt with structured query
+        formatted_prompt = prompt_template.format(structured_query=structured_query)
 
-      # --- Invoke LLM with tools ---
-      itinerary_output = self.llm.invoke(formatted_prompt_str, tools=self.tools)
+        # --- Invoke LLM ---
+        response = self.llm.invoke(formatted_prompt)
 
-      # Merge output into state
-      return {**state, "itenary": itinerary_output}
+        # --- Parse and clean output ---
+        try:
+            itinerary_json = json.loads(response.content)
+        except json.JSONDecodeError:
+            print("⚠️ Warning: Model did not return valid JSON. Returning raw response.")
+            itinerary_json = {"raw_output": response}
 
+        # --- Return only what this node updates ---
+        return {**state,"itenary": itinerary_json}

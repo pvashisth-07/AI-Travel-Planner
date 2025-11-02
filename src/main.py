@@ -6,9 +6,8 @@ from langchain.schema import HumanMessage
 def main():
     
     print("Initializing LLM...")
-    groq_llm = Groqllm()       
-    groq_llm.load_data()       
-    llm = groq_llm.get_llm()   
+    groq_llm = Groqllm()              
+    llm = groq_llm.get_llm()
     print("LLM initialized successfully!")   
 
     # Build the graph
@@ -23,7 +22,7 @@ def main():
 
     #Run the graph
     print("Running the LangGraph pipeline...")
-    final_state = graph.invoke(initial_state,config={"recursion_limit": 100})
+    final_state = graph.invoke(initial_state)
 
     #Display results
     print("\n--- Final Graph Output ---")
