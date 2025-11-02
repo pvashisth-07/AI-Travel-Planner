@@ -71,4 +71,4 @@ class Validate_Itinerary_Node:
         else:
             result = "PASS"
 
-        return {"validation_result": result}
+        return {**state, "validation_result": result}

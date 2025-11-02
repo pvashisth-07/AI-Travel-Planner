@@ -73,4 +73,5 @@ class QueryGenerator:
             if field not in structured_query:
                 structured_query[field] = "unknown" if field != "no_of_travellers" else 1
 
-        return {"structured_query": structured_query}
+        return {**state, "structured_query": structured_query}
+

@@ -65,4 +65,4 @@ class GradeQuery:
         else:
             result = "PASS"
 
-        return {"graded_query": result}
+        return {**state, "graded_query": result}

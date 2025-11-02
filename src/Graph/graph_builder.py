@@ -3,7 +3,7 @@ from src.Tools.tool_assembly import Tools
 from src.State.state import State
 from src.nodes.query_generator import QueryGenerator
 from src.nodes.grade_query import GradeQuery
-from src.nodes.itinerary_node import ItenaryNode
+from src.nodes.itinerary_node import ItineraryNode
 from src.nodes.validate_itinerary_node import Validate_Itinerary_Node
 
 
@@ -26,7 +26,7 @@ class GraphBuilder:
         #Define Nodes
         query_generator = QueryGenerator()
         grade_query = GradeQuery()
-        itinerary_node = ItenaryNode()
+        itinerary_node = ItineraryNode()
         validate_itinerary = Validate_Itinerary_Node()
 
         #Add Nodes to Graph
@@ -34,7 +34,7 @@ class GraphBuilder:
         self.graph_builder.add_node("GradeQuery", grade_query.process)
         self.graph_builder.add_node("ItenaryGenerator", itinerary_node.process)
         self.graph_builder.add_node("ValidateItenary", validate_itinerary.process)
-        self.graph_builder.add_node("ToolNode", tool_node)
+        #self.graph_builder.add_node("ToolNode", tool_node)
 
         #Edges
         self.graph_builder.add_edge(START, "QueryGenerator")
@@ -45,13 +45,13 @@ class GraphBuilder:
             "GradeQuery",
             lambda state: state.get("graded_query", ""),
             {
-                "PASS": "ToolNode",         # connect to tool usage next
+                "PASS": "ItenaryGenerator",         # connect to tool usage next
                 "FAIL": "QueryGenerator"    # retry query generation
             }
         )
 
         # Flow 2: ToolNode → Itinerary generation → Validation
-        self.graph_builder.add_edge("ToolNode", "ItenaryGenerator")
+        #self.graph_builder.add_edge("ToolNode", "ItenaryGenerator")
         self.graph_builder.add_edge("ItenaryGenerator", "ValidateItenary")
 
         # Validation branch: pass or regenerate
