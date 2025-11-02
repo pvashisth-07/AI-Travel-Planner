@@ -46,15 +46,27 @@ class QueryGenerator:
         }}
         """
         response = self.llm.invoke(prompt)
-        
-        # Assuming the LLM returns a JSON-like string, we can use eval safely here
+
+        # ✅ Extract clean text from the model response
+        if hasattr(response, "content"):
+            response_text = response.content
+        else:
+            response_text = str(response)
+
+        response_text = response_text.strip("` \n")
+        if response_text.startswith("json"):
+            response_text = response_text[4:].strip()
+
         try:
-            structured_query = ast.literal_eval(response)
-            if not isinstance(structured_query, dict):
-                raise ValueError("LLM response is not a dictionary")
-        except Exception as e:
-            raise ValueError(f"Failed to parse LLM response: {e}")
-        
+            structured_query = json.loads(response_text)
+        except Exception:
+            import re
+            json_candidate = re.search(r"\{[\s\S]*\}", response_text)
+            if json_candidate:
+                structured_query = json.loads(json_candidate.group())
+            else:
+                raise ValueError(f"Failed to parse valid JSON from LLM output:\n{response_text}")
+
         # Ensure all required fields are present
         required_fields = ["source", "destination", "start_date", "end_date", "budget", "no_of_travellers"]
         for field in required_fields:

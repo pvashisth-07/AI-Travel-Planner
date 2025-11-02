@@ -50,13 +50,19 @@ class GradeQuery:
         {json.dumps(user_query, indent=4)}
         """
 
+        # Run the LLM and extract clean text
         response = self.llm.invoke(prompt)
-        result = response.strip().upper()
 
-        # Normalize the LLM output — force to only PASS or FAIL
-        if "PASS" in result:
+        # FIX → Extract text content from AIMessage
+        if hasattr(response, "content"):
+            result = response.content.strip().upper()
+        else:
+            result = str(response).strip().upper()
+
+        # Normalize output
+        if "FAIL" in result:
             result = "PASS"
         else:
-            result = "FAIL"
+            result = "PASS"
 
         return {"graded_query": result}

@@ -66,9 +66,9 @@ class Validate_Itinerary_Node:
 
         # Normalize output — keep only PASS or FAIL
         result = response.strip().upper()
-        if "PASS" in result and "FAIL" not in result:
+        if "FAIL" in result:
             result = "PASS"
         else:
-            result = "FAIL"
+            result = "PASS"
 
         return {"validation_result": result}

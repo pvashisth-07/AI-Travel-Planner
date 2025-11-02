@@ -40,26 +40,24 @@ class GraphBuilder:
         self.graph_builder.add_edge(START, "QueryGenerator")
         self.graph_builder.add_edge("QueryGenerator", "GradeQuery")
 
-        # Grade Query: if FAIL → back to QueryGenerator, else → Itinerary Generator
+        # Conditional edge: grading result
         self.graph_builder.add_conditional_edges(
             "GradeQuery",
-            lambda state: state["graded_query"],
+            lambda state: state.get("graded_query", ""),
             {
-                "PASS": "ItenaryGenerator",
-                "FAIL": "QueryGenerator"
+                "PASS": "ToolNode",         # connect to tool usage next
+                "FAIL": "QueryGenerator"    # retry query generation
             }
         )
 
-        # Itinerary generator uses external tools
+        # Flow 2: ToolNode → Itinerary generation → Validation
         self.graph_builder.add_edge("ToolNode", "ItenaryGenerator")
-
-        # After itinerary generation, validate it
         self.graph_builder.add_edge("ItenaryGenerator", "ValidateItenary")
 
-        # If validation fails → regenerate itinerary, else → END
+        # Validation branch: pass or regenerate
         self.graph_builder.add_conditional_edges(
             "ValidateItenary",
-            lambda state: state["validation_result"],
+            lambda state: state.get("validation_result", ""),
             {
                 "PASS": END,
                 "FAIL": "ItenaryGenerator"
