@@ -60,9 +60,9 @@ class GradeQuery:
             result = str(response).strip().upper()
 
         # Normalize output
-        if "FAIL" in result:
+        if "PASS" in result:
             result = "PASS"
         else:
-            result = "PASS"
+            result = "FAIL"
 
         return {**state, "graded_query": result}
