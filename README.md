@@ -19,4 +19,11 @@ into complete, validated itineraries — including transport, stays, meals, and 
 | 💻 Language | Python 3.10+ |
 
 ## 🗺️ Workflow Architecture
+User Query
+↓
+Query Generator ──▶ Grade Query
+│ │
+│ (PASS / FAIL)
+│ ↓
+└────────────▶ Itinerary Node ──▶ Validate Itinerary ──▶ (PASS → END / FAIL → Regenerate)
 
