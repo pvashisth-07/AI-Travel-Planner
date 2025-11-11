@@ -27,3 +27,71 @@ Query Generator ──▶ Grade Query
 │ ↓
 └────────────▶ Itinerary Node ──▶ Validate Itinerary ──▶ (PASS → END / FAIL → Regenerate)
 
+### 🔍 Node Responsibilities
+| Node | Description |
+|------|--------------|
+| 🏁 **QueryGenerator** | Converts raw user query into structured JSON |
+| ✅ **GradeQuery** | Validates structure and required fields |
+| 🧳 **ItineraryNode** | Generates day-wise travel itinerary using LLM |
+| 🔎 **Validate_Itinerary_Node** | Checks if itinerary format matches JSON schema |
+| 🧰 **Tools** | Provides APIs for hotels & live web data |
+
+## 🧩 Project Structure
+AI_TRAVEL_PLANNER/
+├── src/
+│ ├── main.py # Entry point for graph execution
+│ ├── Graph/
+│ │ └── graph_builder.py # Builds LangGraph workflow
+│ ├── State/
+│ │ └── state.py # Shared state definition
+│ ├── fine_tuning/
+│ │ └── llm_tuning.py # LLM wrapper (Groq initialization)
+│ ├── nodes/
+│ │ ├── query_generator.py
+│ │ ├── grade_query.py
+│ │ ├── itinerary_node.py
+│ │ └── validate_itinerary_node.py
+│ └── Tools/
+│ ├── tool_assembly.py
+│ ├── hotel_tool.py
+│ └── search_tool.py
+├── .env # API keys and secrets
+├── requirements.txt
+├── app.py # Lightweight launcher
+└── README.md
+
+
+## 🚀 Example Run
+**Command**
+python app.py
+
+## 🔧 Setup Instructions
+
+### 1️⃣ Clone the repository
+git clone https://github.com/pranav-vashisth/AI_Travel_Planner.git
+cd AI_Travel_Planner
+python -m venv ai_planner
+# Activate the environment
+ai_planner\Scripts\activate   # on Windows
+source ai_planner/bin/activate   # on Linux/Mac
+pip install -r requirements.txt
+
+##💡 Features
+
+✅ Converts natural language trip queries into structured format
+✅ Generates realistic, validated itineraries
+✅ Integrates hotel & travel APIs
+✅ Modular, scalable LangGraph workflow
+✅ Easily extendable with new nodes
+
+##💡 Future Enhancements
+
+🌐 Real-time flight, weather, and map APIs
+
+📅 Smart date parsing (“next weekend”, “after Diwali”)
+
+🧭 Google Maps integration
+
+🎨 Streamlit-based UI
+
+🧠 Fine-tuned travel dataset for Indian regions
