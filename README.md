@@ -1,6 +1,6 @@
 # 🌍 AI Travel Planner — Intelligent Itinerary Generator ✈️
 > 🚀 *An end-to-end AI-powered travel planner that converts natural-language trip requests into fully structured, budget-friendly itineraries using Groq’s LLM and LangGraph.*
-![Python](https://img.shields.io/badge/Python-3.10-blue?logo=python) ![LangGraph](https://img.shields.io/badge/LangGraph-Orchestration-orange) ![Groq-LLM](https://img.shields.io/badge/Groq-LLM-red) ![License: MIT](https://img.shields.io/badge/License-MIT-green) ![Status](https://img.shields.io/badge/Status-Active-success)
+![Python](https://img.shields.io/badge/Python-3.10-blue?logo=python) ![LangGraph](https://img.shields.io/badge/LangGraph-Orchestration-orange) ![Groq-LLM](https://img.shields.io/badge/Groq-LLM-red) ![Status](https://img.shields.io/badge/Status-Active-success)
 
 ## 🧠 Overview
 **AI Travel Planner** is an intelligent system that autonomously plans trips using **Large Language Models (LLMs)** and **LangGraph-based workflow orchestration**. It converts queries like:  
@@ -19,3 +19,4 @@ into complete, validated itineraries — including transport, stays, meals, and 
 | 💻 Language | Python 3.10+ |
 
 ## 🗺️ Workflow Architecture
+
