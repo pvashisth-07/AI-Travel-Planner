@@ -24,16 +24,17 @@ class GraphBuilder:
         tool_node = Tools.create_tool_node(tools)
 
         #Define Nodes
-        query_generator = QueryGenerator()
-        grade_query = GradeQuery()
-        itinerary_node = ItineraryNode()
-        validate_itinerary = Validate_Itinerary_Node()
+        query_generator = QueryGenerator(self.llm)
+        grade_query = GradeQuery(self.llm)
+        itinerary_node = ItineraryNode(self.llm)
+        validate_itinerary = Validate_Itinerary_Node(self.llm)
 
         #Add Nodes to Graph
         self.graph_builder.add_node("QueryGenerator", query_generator.process)
         self.graph_builder.add_node("GradeQuery", grade_query.process)
         self.graph_builder.add_node("ItenaryGenerator", itinerary_node.process)
         self.graph_builder.add_node("ValidateItenary", validate_itinerary.process)
+        
         #self.graph_builder.add_node("ToolNode", tool_node)
 
         #Edges
