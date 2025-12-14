@@ -21,7 +21,7 @@ class Validate_Itinerary_Node:
         """
         Validate the itinerary JSON format and return only PASS or FAIL.
         """
-        generated_itenary = state["itenary"]
+        generated_itenary = state["itinerary"]
 
         prompt = f"""
         You are a strict JSON structure validator.

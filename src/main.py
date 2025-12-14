@@ -16,8 +16,8 @@ def main():
 
     #Define initial state
     initial_state = {
-    "query": "Create a detailed 4-day budget travel plan for two people from Jaipur to Pushkar starting next weekend, keeping the total budget under ₹10,000. Include transport, stay, food, and daily activities.",
-    "messages": [HumanMessage(content="Create a detailed 4-day budget travel plan for two people from Jaipur to Pushkar starting next weekend, keeping the total budget under ₹10,000. Include transport, stay, food, and daily activities.")]
+    "query": "Create a detailed 4-day budget travel plan for two people from Delhi to Jaipur starting next weekend, keeping the total budget under ₹10,000. Include transport, stay, food, and daily activities.",
+    "messages": [HumanMessage(content="Create a detailed 4-day budget travel plan for two people from Delhi to Jaipur starting next weekend, keeping the total budget under ₹10,000. Include transport, stay, food, and daily activities.")]
     }
 
     #Run the graph

@@ -1,0 +1,103 @@
+{
+  "TripPlan": {
+    "title": "4-Day Budget Rishikesh Adventure",
+    "dates_assumed": "July 10-13, 2025",
+    "group_size_assumed": "15-20 students",
+    "notes": "A compact itinerary focused on yoga, adventure sports, and cultural exploration, ideal for college groups on a tight budget."
+  },
+  "TransportOptions": {
+    "comparison_table": [
+      {
+        "mode": "Train (via Haridwar)",
+        "avg_cost_per_person": 200,
+        "travel_time_est": "5 hrs",
+        "pros": "Comfortable, scenic, free Wi-Fi on some trains",
+        "cons": "Limited seats during peak season, longer travel time",
+        "source": "IRCTC"
+      },
+      {
+        "mode": "Bus (via Haridwar)",
+        "avg_cost_per_person": 120,
+        "travel_time_est": "4 hrs",
+        "pros": "Cheaper, frequent departures",
+        "cons": "Crowded, less comfortable",
+        "source": "RedBus"
+      }
+    ]
+  },
+  "StayOptions": {
+    "choices": [
+      {
+        "name": "Rishikesh Backpackers Hostel",
+        "approx_price_per_night_per_person": 250,
+        "facilities": "Shared dorms, Wi-Fi, kitchen, free breakfast",
+        "distance_from_center": "1 km from Laxman Jhula",
+        "why_student_friendly": "Low cost, social atmosphere, on-site event space",
+        "live_example_source": "Booking.com"
+      },
+      {
+        "name": "The Ganga Lodge",
+        "approx_price_per_night_per_person": 400,
+        "facilities": "Private rooms, Wi-Fi, yoga studio, pool",
+        "distance_from_center": "500 m from Shivpuri",
+        "why_student_friendly": "Affordable rates for groups, yoga classes included",
+        "live_example_source": "TripAdvisor"
+      }
+    ]
+  },
+  "FoodSuggestions": {
+    "avg_cost_per_meal_budget": "₹120",
+    "cheap_options": [
+      "Kachori & chai at local street stalls",
+      "Paneer paratha from a dhaba",
+      "Masala dosa at a roadside vendor",
+      "Vegetarian thali at a local eatery"
+    ],
+    "must_try_local_dishes": [
+      "Kheer (rice pudding)",
+      "Aloo tikki",
+      "Bajji (vegetable fritters)"
+    ]
+  },
+  "DayWiseItinerary": {
+    "Day1": {
+      "route": "Delhi ➜ Haridwar (train) ➜ Rishikesh (bus)",
+      "transport_est_cost": 320,
+      "activities": [
+        "Check-in and orientation",
+        "Evening Ganga Aarti at Triveni Ghat"
+      ],
+      "stay": "Rishikesh Backpackers Hostel"
+    },
+    "Day2": {
+      "route": "Rishikesh ➜ Shivpuri (train) ➜ Rishikesh",
+      "transport_est_cost": 240,
+      "activities": [
+        "Morning yoga session",
+        "White-water rafting on the Ganga (₹600 per person)",
+        "Explore Laxman Jhula and Ram Jhula"
+      ],
+      "stay": "Rishikesh Backpackers Hostel"
+    },
+    "Day3": {
+      "route": "Rishikesh ➜ Haridwar (bus) ➜ Rishikesh",
+      "transport_est_cost": 240,
+      "activities": [
+        "Visit Neelkanth Mahadev Temple",
+        "Biking tour around the river",
+        "Cultural night: folk music and dance"
+      ],
+      "stay": "Rishikesh Backpackers Hostel"
+    },
+    "Day4": {
+      "route": "Rishikesh ➜ Haridwar (train) ➜ Home",
+      "transport_est_cost": 320,
+      "activities": [
+        "Final yoga session",
+        "Souvenir shopping at local markets",
+        "Departure"
+      ],
+      "stay": "N/A"
+    }
+  }
+}

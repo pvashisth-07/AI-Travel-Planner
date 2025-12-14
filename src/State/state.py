@@ -12,5 +12,5 @@ class State(TypedDict, total=False):
     query: str                                    # Raw user query
     structured_query: dict                        # Generated structured query
     graded_query: str                             # PASS or FAIL from grading
-    itenary: dict                                 # Generated itinerary
+    itinerary: dict                                 # Generated itinerary
     validation_result: str                        # PASS or FAIL from itinerary validation
