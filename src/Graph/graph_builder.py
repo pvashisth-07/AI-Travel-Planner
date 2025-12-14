@@ -38,7 +38,15 @@ class GraphBuilder:
         #self.graph_builder.add_node("ToolNode", tool_node)
 
         #Edges
-        self.graph_builder.add_edge(START, "QueryGenerator")
+        self.graph_builder.add_conditional_edges(
+            START,
+            lambda state: "SKIP" if "structured_query" in state else "RUN",
+            {
+                "SKIP": "GradeQuery",
+                "RUN": "QueryGenerator"
+            }
+        )
+
         self.graph_builder.add_edge("QueryGenerator", "GradeQuery")
 
         # Conditional edge: grading result

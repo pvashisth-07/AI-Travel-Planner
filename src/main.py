@@ -1,33 +1,54 @@
 from src.fine_tuning.llm_tuning import Groqllm
 from src.Graph.graph_builder import GraphBuilder
-from src.State.state import State
 from langchain.schema import HumanMessage
+import json
+
+
+def get_user_input():
+    print("\nEnter travel details:\n")
+
+    source = input("Source city: ")
+    destination = input("Destination city: ")
+    start_date = input("Start date (YYYY-MM-DD): ")
+    end_date = input("End date (YYYY-MM-DD): ")
+    budget = input("Total budget (e.g., ₹10000): ")
+    no_of_travellers = int(input("Number of travellers: "))
+
+    return {
+        "source": source,
+        "destination": destination,
+        "start_date": start_date,
+        "end_date": end_date,
+        "budget": budget,
+        "no_of_travellers": no_of_travellers
+    }
+
 
 def main():
-    
     print("Initializing LLM...")
-    groq_llm = Groqllm()              
-    llm = groq_llm.get_llm()
-    print("LLM initialized successfully!")   
+    llm = Groqllm().get_llm()
+    print("LLM initialized successfully!")
 
-    # Build the graph
     print("Building AI Travel Planner Graph...")
     graph = GraphBuilder(model=llm).ai_traveller_planner_graph()
 
-    #Define initial state
+    structured_query = get_user_input()
+
     initial_state = {
-    "query": "Create a detailed 4-day budget travel plan for two people from Delhi to Jaipur starting next weekend, keeping the total budget under ₹10,000. Include transport, stay, food, and daily activities.",
-    "messages": [HumanMessage(content="Create a detailed 4-day budget travel plan for two people from Delhi to Jaipur starting next weekend, keeping the total budget under ₹10,000. Include transport, stay, food, and daily activities.")]
+        "structured_query": structured_query,
+        "graded_query": "PASS",   # ✅ skip QueryGenerator
+        "messages": [
+            HumanMessage(
+                content=f"Generate travel itinerary for: {json.dumps(structured_query)}"
+            )
+        ]
     }
 
-    #Run the graph
-    print("Running the LangGraph pipeline...")
+    print("\nRunning the LangGraph pipeline...")
     final_state = graph.invoke(initial_state)
 
-    #Display results
-    print("\n--- Final Graph Output ---")
-    for key, value in final_state.items():
-        print(f"{key}: {value}")
+    print("\n--- Final JSON Output ---")
+    print(json.dumps(final_state["itinerary"], indent=2, ensure_ascii=False))
 
 
 if __name__ == "__main__":
